@@ -48,11 +48,8 @@ public class FrontControllerServletV3 extends HttpServlet {
 
     private static Map<String, String> createParamMap(HttpServletRequest request) {
         Map<String,String> paramMap = new HashMap<>();
-
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
-
-
         return paramMap;
     }
 
